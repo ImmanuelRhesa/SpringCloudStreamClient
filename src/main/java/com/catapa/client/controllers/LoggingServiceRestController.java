@@ -24,7 +24,7 @@ public class LoggingServiceRestController {
     @RequestMapping(method = RequestMethod.POST)
     public void write() {
         HashMap<String, String> map = new HashMap<>();
-        map.put("to", "test@gmail.com");
+        map.put("to", "test@live.com");
         map.put("emailType", "FORGOT_PASSWORD");
         this.channel.send(MessageBuilder.withPayload(map).build());
     }
