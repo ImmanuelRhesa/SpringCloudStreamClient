@@ -25,6 +25,7 @@ public class LoggingServiceRestController {
     public void write() {
         HashMap<String, String> map = new HashMap<>();
         map.put("to", "test@live.com");
+        map.put("subject", "test");
         map.put("emailType", "FORGOT_PASSWORD");
         this.channel.send(MessageBuilder.withPayload(map).build());
     }
